@@ -1,0 +1,115 @@
+ :root {
+  --night: #170d20; --night2: #24132b; --cream: #fff4df; --muted: #cbb9c9;
+  --gold: #f4c879; --rose: #f1a8ad; --line: rgba(244,200,121,.24);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:var(--night); color:var(--cream); font-family:"DM Sans",sans-serif; overflow-x:hidden; }
+body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.13; z-index:-1; background-image:radial-gradient(#f4c879 1px,transparent 1px); background-size:46px 46px; }
+.ambient-glow { position:fixed; width:55vw; height:55vw; border-radius:50%; background:#8d3d4a; filter:blur(140px); opacity:.12; top:20%; left:25%; pointer-events:none; z-index:-1; }
+.topbar { position:fixed; top:0; left:0; width:100%; padding:17px 6vw; display:flex; justify-content:space-between; align-items:center; z-index:10; background:rgba(23,13,32,.78); backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,.06); }
+.brand { color:var(--gold); text-decoration:none; font-family:"Playfair Display",serif; font-size:25px; font-weight:700; }
+.brand span { font-size:12px; }
+.nav-links { display:flex; gap:27px; }
+.nav-links a { color:#e9dbe5; text-decoration:none; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+.nav-links a:hover { color:var(--gold); }
+.music-toggle { background:transparent; color:var(--gold); border:1px solid var(--line); padding:9px 13px; border-radius:30px; cursor:pointer; font:600 12px "DM Sans"; }
+.section { padding:110px 8vw; position:relative; }
+.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding-top:130px; }
+.hero-stars { color:var(--gold); letter-spacing:.5em; margin-bottom:30px; opacity:.8; }
+.eyebrow,.section-kicker { color:var(--gold); font-size:10px; letter-spacing:.24em; font-weight:700; text-transform:uppercase; }
+.hero h1 { font:600 clamp(54px,8vw,105px)/1.02 "Playfair Display",serif; margin:22px 0; letter-spacing:-.04em; }
+h1 em,h2 em { color:var(--rose); font-weight:500; }
+.hero-copy { color:#ddcbd9; line-height:1.9; font-size:16px; }
+.diya { position:relative; width:90px; height:95px; margin:4px 0 4px; }
+.flame { position:absolute; width:22px; height:34px; left:34px; top:0; background:linear-gradient(#fff7bd,#ff9b43 75%); border-radius:100% 0 100% 100%; transform:rotate(45deg); box-shadow:0 0 35px 14px rgba(255,169,75,.45); animation:flicker 1.5s infinite alternate; }
+.bowl { position:absolute; bottom:7px; left:9px; width:72px; height:34px; background:linear-gradient(130deg,#e6a04f,#8f3f39); border-radius:8px 8px 42px 42px; border-bottom:4px solid #f5c06d; }
+.diya-glow { position:absolute; width:120px; height:65px; bottom:-5px; left:-15px; background:#ffad4b; filter:blur(35px); opacity:.2; }
+@keyframes flicker { from{transform:rotate(42deg) scale(.94)} to{transform:rotate(48deg) scale(1.06)} }
+.primary-btn { margin-top:24px; border:0; background:linear-gradient(110deg,#f4c879,#eaa4a4); color:#281329; padding:15px 25px; border-radius:40px; font-weight:700; cursor:pointer; box-shadow:0 8px 35px #e99f7540; }
+.primary-btn span { margin-left:14px; }
+.tiny-note,.soft-caption { color:#9d899d; font-size:11px; margin-top:15px; }
+.scroll-cue { position:absolute; bottom:28px; color:#a891a6; letter-spacing:.18em; font-size:9px; }
+.scroll-cue span { color:var(--gold); display:block; margin-top:8px; font-size:16px; }
+.song-section { background:linear-gradient(180deg,transparent,#24132b 20%,#24132b 80%,transparent); }
+.section-kicker { text-align:center; margin-bottom:35px; }
+.song-card { max-width:900px; margin:auto; padding:38px; border:1px solid var(--line); border-radius:25px; background:linear-gradient(135deg,#352039,#211326); display:grid; grid-template-columns:190px 1fr; gap:38px; box-shadow:0 25px 80px #0003; }
+.song-art { min-height:230px; border-radius:18px; background:radial-gradient(circle at 50% 40%,#e7a45c,#9b4a51 42%,#38203d 75%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff0d4; box-shadow:inset 0 0 45px #fff2; }
+.song-art span { font:80px "Playfair Display"; }
+.song-art small { text-align:center; letter-spacing:.25em; font-size:9px; line-height:1.8; }
+.song-content h2,.section-title,.diwali-section h2 { font:600 clamp(32px,4vw,48px)/1.2 "Playfair Display",serif; margin:10px 0; }
+.song-subtitle { color:#bca9ba; font-size:12px; }
+.lyrics { color:#f4e5dd; line-height:1.9; font:italic 16px/1.9 "Playfair Display",serif; margin:25px 0; }
+.text-btn,.back-top { background:transparent; border:1px solid var(--line); border-radius:30px; color:var(--gold); padding:11px 18px; cursor:pointer; }
+.soft-caption { text-align:center; }
+.promises-section { text-align:center; }
+.section-title { font-size:clamp(34px,5vw,54px); }
+.section-intro { color:var(--muted); max-width:570px; margin:18px auto 38px; line-height:1.8; font-size:14px; }
+.promise-grid { max-width:1000px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.promise-card { min-height:190px; padding:22px 14px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg,#2d1a34,#1e1227); color:var(--cream); cursor:pointer; transition:.25s; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.promise-card:hover,.promise-card.active { transform:translateY(-5px); border-color:var(--gold); background:#39233b; }
+.promise-number { align-self:flex-end; color:#9e829e; font-size:10px; }
+.promise-icon { color:var(--gold); font-size:29px; }
+.promise-card strong { font:500 19px "Playfair Display",serif; }
+.promise-card small { color:#a891a6; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+.promise-reveal { max-width:720px; min-height:70px; margin:28px auto 0; padding:20px 25px; color:#f6d9c9; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font:italic 17px/1.7 "Playfair Display",serif; }
+.story-section { background:linear-gradient(180deg,transparent,#211329 15%,#211329 85%,transparent); }
+.story-section .section-kicker,.story-section .section-title { text-align:center; }
+.timeline { max-width:760px; margin:55px auto 0; position:relative; }
+.timeline:before { content:""; position:absolute; top:8px; bottom:15px; left:150px; width:1px; background:linear-gradient(var(--gold),#a65f78,transparent); }
+.timeline-item { display:grid; grid-template-columns:125px 50px 1fr; gap:0; position:relative; margin:0 0 38px; }
+.timeline-date { text-align:right; padding-top:5px; color:var(--gold); font-size:9px; letter-spacing:.12em; line-height:1.5; }
+.timeline-dot { width:9px; height:9px; margin:7px auto 0; border-radius:50%; background:var(--gold); box-shadow:0 0 15px #f4c879; z-index:1; }
+.timeline-copy h3 { font:500 22px "Playfair Display",serif; margin:0 0 8px; }
+.timeline-copy p { color:#bfaebe; font-size:13px; line-height:1.8; margin:0; }
+.memory-note { text-align:center; color:var(--rose); font:italic 20px "Playfair Display"; margin-top:55px; }
+.diwali-section { text-align:center; overflow:hidden; }
+.diwali-art { display:flex; justify-content:center; gap:40px; color:var(--gold); font-size:35px; margin-bottom:30px; text-shadow:0 0 25px #e9a65e; }
+.diwali-section h2 { font-size:clamp(36px,5vw,58px); }
+.diwali-section p { max-width:600px; margin:22px auto; color:#cbb9c9; font-size:14px; line-height:2; }
+.signature { color:var(--gold); font:italic 22px "Playfair Display"; margin-top:35px; }
+.letter-section { background:linear-gradient(180deg,transparent,#25152b 15%,#25152b); text-align:center; }
+.letter-envelope { max-width:780px; margin:0 auto; position:relative; padding:12px; border:1px solid #d9ad71; border-radius:7px; background:#ead7b8; box-shadow:0 25px 90px #0005; color:#38253a; text-align:left; }
+.letter-top { text-align:center; color:#8d5c4d; font-size:9px; letter-spacing:.25em; padding:14px; border-bottom:1px solid #c8aa8c; }
+.letter-inner { padding:35px clamp(20px,6vw,60px) 45px; background:repeating-linear-gradient(#f5e9d4 0,#f5e9d4 31px,#e8d8c2 32px); }
+.letter-date { color:#9c7667; font-size:11px; }
+.letter-inner h2 { font:600 34px "Playfair Display"; margin:24px 0; }
+.letter-inner p { font:15px/2 "Playfair Display",serif; color:#493449; }
+.letter-inner .letter-last { color:#9c4e5b; font-style:italic; font-size:18px; margin-top:27px; }
+.letter-signoff { margin-top:30px!important; }
+.letter-signoff span { font:italic 30px "Playfair Display"; color:#9c4e5b; }
+.letter-seal { position:absolute; bottom:-22px; left:calc(50% - 25px); width:50px; height:50px; display:grid; place-items:center; border-radius:50%; background:#9c4e5b; color:#fff0d4; font:20px "Playfair Display"; box-shadow:0 4px 14px #0003; }
+.letter-seal span { font-size:10px; margin:0 2px; }
+.end-note { color:var(--rose); font:italic 20px "Playfair Display"; margin:55px 0 25px; }
+footer { text-align:center; padding:25px 10px; color:#806d83; font-size:9px; letter-spacing:.2em; }
+.toast { position:fixed; bottom:25px; left:50%; transform:translate(-50%,20px); opacity:0; pointer-events:none; background:#f4c879; color:#24132b; padding:11px 18px; border-radius:30px; font-size:12px; transition:.3s; z-index:20; }
+.toast.show { opacity:1; transform:translate(-50%,0); }
+@media(max-width:700px) {
+  .topbar { padding:13px 5vw; } .nav-links { gap:12px; } .nav-links a { font-size:9px; } .music-toggle { padding:8px 10px; } #musicLabel { display:none; }
+  .section { padding:90px 6vw; } .hero { padding-top:120px; } .song-card { grid-template-columns:1fr; padding:23px; gap:22px; } .song-art { min-height:150px; } .song-art span { font-size:58px; }
+  .promise-grid { grid-template-columns:repeat(2,1fr); gap:10px; } .promise-card { min-height:160px; padding:15px 8px; } .promise-card strong { font-size:16px; }
+  .timeline:before { left:8px; } .timeline-item { grid-template-columns:18px 1fr; gap:15px; } .timeline-date { grid-column:2; grid-row:1; text-align:left; padding:0 0 7px; } .timeline-dot { grid-column:1; grid-row:1 / span 2; margin:4px 0 0; } .timeline-copy { grid-column:2; }
+  .diwali-art { gap:18px; font-size:27px; } .letter-inner { padding:25px 19px 35px; } .letter-inner h2 { font-size:29px; } .letter-inner p { font-size:14px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*:before,*:after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
+
+/* Cinematic gift opening and personal photo gallery */
+.welcome-screen{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;background:radial-gradient(ellipse at center,#48243e,#170d20 72%);transition:opacity .8s,visibility .8s}
+.welcome-screen.closed{opacity:0;visibility:hidden;pointer-events:none}
+.welcome-stars{color:#f4c879;letter-spacing:.5em;margin-bottom:20px}
+.welcome-envelope{width:100px;height:75px;margin:15px;background:linear-gradient(145deg,#a75a69,#542b49);border:1px solid #f4c879;border-radius:5px;display:grid;place-items:center;color:#ffe5b1;font-size:30px;box-shadow:0 0 45px #f4c87944}
+.welcome-screen h1{font:600 clamp(42px,7vw,76px)/1.05 'Playfair Display',serif;margin:15px 0}
+.welcome-screen h1 em{color:#f1a8ad;font-weight:500}
+.welcome-screen p:not(.eyebrow){color:#cbb9c9}
+.welcome-screen small{color:#a995a9;margin-top:15px;font-size:10px}
+.song-player{width:100%;max-width:420px;margin:15px 0 5px}
+.song-help{color:#a995a9;font-size:10px}.song-help code{color:#f4c879}
+.gallery-section{text-align:center;background:linear-gradient(180deg,transparent,#24132b 15%,#24132b 85%,transparent)}
+.photo-grid{max-width:1050px;margin:40px auto;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:14px}
+.photo-card{position:relative;overflow:hidden;margin:0;border:1px solid #f4c87944;border-radius:16px;background:#2b1a32}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.photo-card:hover img{transform:scale(1.05)}
+.photo-card:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#100914cc)}
+.photo-card figcaption{position:absolute;z-index:1;bottom:15px;left:16px;right:12px;text-align:left;color:#fff2df;font:italic 17px 'Playfair Display'}
+.photo-tall{grid-row:span 2}.photo-wide{grid-column:span 2}
+@media(max-width:700px){.photo-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px;gap:9px}.photo-tall{grid-row:span 2}.photo-wide{grid-column:span 2}}

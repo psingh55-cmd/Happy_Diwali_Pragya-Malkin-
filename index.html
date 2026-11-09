@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#170d20" />
+  <meta name="description" content="A little Diwali universe, made with love for Pragya." />
+  <title>For Pragya, With All My Love ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <nav class="topbar">
+    <a class="brand" href="#home" aria-label="Back to beginning">P <span>✦</span></a>
+    <div class="nav-links">
+      <a href="#promises">Promises</a>
+      <a href="#story">Our story</a><a href="#memories">Memories</a>
+      <a href="#letter">The letter</a>
+    </div>
+    <button class="music-toggle" id="musicToggle" aria-label="Play or pause melody">♫ <span id="musicLabel">Play our melody</span></button>
+  </nav>
+
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-stars">✦　✧　✦</div><div class="welcome-envelope">♡</div>
+    <p class="eyebrow">A LETTER, A SONG, A THOUSAND MEMORIES</p>
+    <h1>Something made<br><em>just for you.</em></h1><p>Pragya, this little world is yours.</p>
+    <button class="primary-btn" id="openGiftBtn">Open your Diwali gift ♡</button><small>Turn your sound on for the song.</small>
+  </div>
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-stars" aria-hidden="true">✦　·　✧　　　·　✦</div>
+      <p class="eyebrow">A LITTLE DIWALI SURPRISE · MADE JUST FOR YOU</p>
+      <div class="diya" aria-hidden="true"><span class="flame"></span><span class="bowl"></span><span class="diya-glow"></span></div>
+      <h1>For my favourite<br><em>light, Pragya.</em></h1>
+      <p class="hero-copy">This Diwali, the lights outside are beautiful.<br>But the brightest part of my world is still you.</p>
+      <button class="primary-btn" id="beginBtn">Open your surprise <span>→</span></button>
+      <p class="tiny-note">Best experienced with the sound on and your heart open.</p>
+      <div class="scroll-cue">SCROLL TO FEEL THE LOVE <span>↓</span></div>
+    </section>
+
+    <section class="song-section section" id="song">
+      <div class="section-kicker">01 · A SONG FOR YOU</div>
+      <div class="song-card">
+        <div class="song-art"><span>♫</span><small>OUR LITTLE<br>MELODY</small></div>
+        <div class="song-content">
+          <p class="eyebrow">A song I wish I could sing to you</p>
+          <h2>“You Are My Diya”</h2>
+          <p class="song-subtitle">Your song, playing just for this moment</p>
+          <audio class="song-player" controls preload="metadata"><source src="assets/our-song.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+          <p class="song-help">Add your audio file as <code>assets/our-song.mp3</code>. See README for instructions.</p>
+          <div class="lyrics">
+            <p>When the evening paints the sky in gold,<br>
+            And a thousand little stories unfold,<br>
+            I don't need the stars to guide me through—<br>
+            Every road feels like home with you.</p>
+            <p>You are the diya in my darkest night,<br>
+            The quiet warmth, the gentlest light.<br>
+            And if the world begins anew,<br>
+            In every lifetime, I'd look for you.</p>
+          </div>
+          <button class="text-btn" id="songPlayBtn">♫ Play the little melody</button>
+        </div>
+      </div>
+      <p class="soft-caption">The melody is an original instrumental created by this page. Tap play whenever you want to hear it.</p>
+    </section>
+
+    <section class="promises-section section" id="promises">
+      <div class="section-kicker">02 · MY PROMISES TO YOU</div>
+      <h2 class="section-title">Not just words for tonight.<br><em>Promises for all our tomorrows.</em></h2>
+      <p class="section-intro">Tap each diya to uncover a promise. I want to keep earning the privilege of being your person.</p>
+      <div class="promise-grid">
+        <button class="promise-card" data-promise="I promise to listen—not just to your words, but to the feelings you sometimes struggle to put into them. Your voice will always matter to me.">
+          <span class="promise-number">01</span><span class="promise-icon">🪔</span><strong>To always listen</strong><small>Tap to reveal</small>
+        </button>
+        <button class="promise-card" data-promise="I promise to keep choosing us: on easy days, on difficult days, and on the ordinary days in between. Love will be something I do, not only something I say.">
+          <span class="promise-number">02</span><span class="promise-icon">♡</span><strong>To keep choosing you</strong><small>Tap to reveal</small>
+        </button>
+        <button class="promise-card" data-promise="I promise to make room for your dreams, your courage, your adventures and your individuality. I want to be beside you, never in the way of your becoming.">
+          <span class="promise-number">03</span><span class="promise-icon">✧</span><strong>To cheer for your dreams</strong><small>Tap to reveal</small>
+        </button>
+        <button class="promise-card" data-promise="I promise to keep finding reasons to laugh with you, plan little escapes, take long walks, and make beautiful memories out of simple moments.">
+          <span class="promise-number">04</span><span class="promise-icon">☾</span><strong>To keep life playful</strong><small>Tap to reveal</small>
+        </button>
+        <button class="promise-card" data-promise="I promise to be honest, patient and kind—even when we disagree. I will never treat your trust as something ordinary.">
+          <span class="promise-number">05</span><span class="promise-icon">∞</span><strong>To protect our trust</strong><small>Tap to reveal</small>
+        </button>
+        <button class="promise-card" data-promise="I promise that you won't have to wonder whether you are loved. I will show it in the little things, consistently, for as long as I get to.">
+          <span class="promise-number">06</span><span class="promise-icon">✨</span><strong>To make you feel loved</strong><small>Tap to reveal</small>
+        </button>
+      </div>
+      <div class="promise-reveal" id="promiseReveal" aria-live="polite">Choose a promise above. This one is from my heart. ♡</div>
+    </section>
+
+    <section class="story-section section" id="story">
+      <div class="section-kicker">03 · LITTLE PIECES OF FOREVER</div>
+      <h2 class="section-title">Some dates. Some places.<br><em>A whole lot of us.</em></h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">06 APRIL 2026</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><h3>The conversation that found its way back</h3><p>One Instagram reconnection—and somehow, a new chapter began. I didn't know then how much happiness was waiting ahead.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">27 APRIL 2026</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><h3>Words I'll always remember</h3><p>“I love you, Prasoon.” A simple sentence that became one of my favourite memories.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">09 JUNE 2026</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><h3>The day something shifted</h3><p>You became a reason to grow—not because I had to become someone else, but because loving you made me want to become better.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">06 SEPTEMBER 2026</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><h3>My favourite yes</h3><p>The day you accepted my proposal. A moment I'll carry with me, not as an ending, but as the beginning of our next adventure.</p></div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">OUR MANY LITTLE ADVENTURES</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-copy"><h3>Vrindavan, Barsana and Rishikesh</h3><p>Night walks after dinner, photographs at Barsana, and watching you take on bungee jumping with that adventurous spirit of yours. I hope we collect a hundred more stories like these.</p></div>
+        </article>
+      </div>
+      <div class="memory-note">And the best part? Our story is still being written.</div>
+    </section>
+
+    <section class="gallery-section section" id="memories">
+      <div class="section-kicker">A FEW FRAMES OF US</div>
+      <h2 class="section-title">Little moments,<br><em>kept close forever.</em></h2>
+      <p class="section-intro">Every photograph holds a feeling I wish I could keep living in.</p>
+      <div class="photo-grid">
+        <figure class="photo-card photo-tall"><img src="assets/diwali-lantern.jpeg" alt="A glowing lantern on Diwali night"><figcaption>May we always find our light.</figcaption></figure>
+        <figure class="photo-card"><img src="assets/our-selfie.jpeg" alt="A happy selfie together"><figcaption>My favourite view is us.</figcaption></figure>
+        <figure class="photo-card photo-wide"><img src="assets/temple-together.jpeg" alt="Together at the temple"><figcaption>Exploring beautiful places with you.</figcaption></figure>
+        <figure class="photo-card"><img src="assets/pragya-temple.jpeg" alt="Pragya at the temple"><figcaption>Your smile, my favourite memory.</figcaption></figure>
+        <figure class="photo-card"><img src="assets/rishikesh-together.jpeg" alt="Together by the river in Rishikesh"><figcaption>A thousand adventures still to come.</figcaption></figure>
+      </div>
+    </section>
+    <section class="diwali-section section">
+      <div class="section-kicker">04 · THIS DIWALI</div>
+      <div class="diwali-art" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>·</span><span>✧</span></div>
+      <h2>May every light remind you<br><em>how loved you are.</em></h2>
+      <p>May your days be full of courage, peace, laughter and everything your heart is wishing for. And whenever life feels a little dark, I hope you remember: you never have to make your light smaller.</p>
+      <div class="signature">Happy Diwali, my love. ♡</div>
+    </section>
+
+    <section class="letter-section section" id="letter">
+      <div class="section-kicker">05 · OPEN WHEN YOU WANT TO FEEL MY HEART</div>
+      <div class="letter-envelope">
+        <div class="letter-top">A LETTER FOR PRAGYA</div>
+        <div class="letter-inner">
+          <p class="letter-date">This Diwali · With all my love</p>
+          <h2>My dearest Pragya,</h2>
+          <p>I wanted to give you something that would last longer than a box of sweets or a few beautiful lights. So I made you this little corner of the internet—a place you can return to whenever you want a reminder of how much you mean to me.</p>
+          <p>Sometimes I think about how unexpectedly our story found its way here. A conversation, a few honest words, the little moments that slowly became important, and then that beautiful day when you said yes. I don't take any of it for granted.</p>
+          <p>I love the way you bring adventure into life. I think about our walks in Vrindavan, our time in Barsana, and Rishikesh—especially seeing you take on bungee jumping. I love that there is always something new to discover with you. Even the simplest time together becomes a memory I want to keep.</p>
+          <p>I cannot promise that every day will be perfect. But I can promise to keep showing up, to keep learning how to love you better, to respect your dreams, to laugh with you, and to stand beside you when life gets difficult. I want us to build a life where both of us feel safe to be ourselves and excited about what comes next.</p>
+          <p>Thank you for being you, Pragya. Thank you for your love, your trust, your warmth, and for making ordinary days feel special. If I could choose one thing to carry into every tomorrow, it would be the chance to keep making you smile.</p>
+          <p class="letter-last">You are not just a part of my happiness.<br>You are one of the reasons I believe in it.</p>
+          <p class="letter-signoff">Forever choosing you,<br><span>Prasoon</span> ♡</p>
+        </div>
+        <div class="letter-seal">P <span>♥</span> P</div>
+      </div>
+      <p class="end-note">The lights will fade tonight. What I feel for you won't. ✨</p>
+      <button class="back-top" id="backTop">Back to the beginning ↑</button>
+    </section>
+  </main>
+
+  <footer>MADE WITH LOVE, FOR PRAGYA · THIS DIWALI AND EVERY DAY AFTER</footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
